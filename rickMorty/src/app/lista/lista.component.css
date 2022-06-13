@@ -1,0 +1,14 @@
+.box{
+  margin-top: 20px;
+  text-align: center;
+}
+
+.txt{
+  text-align: left;
+}
+.btncolor{
+  background-color: #FEBD69;
+  color: black;
+  border: none;
+  width: 100%;
+}

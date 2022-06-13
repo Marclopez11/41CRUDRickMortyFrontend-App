@@ -1,0 +1,21 @@
+
+
+
+<div class="container box">
+  <div class="row align-items-start">
+    <div class="row">
+      <div  *ngFor="let art of articulos" class="col-sm-3">
+        <div class="card" style="width: 18rem;margin-top: 40px;margin-right: 40px">
+          <img class="card-img-top" src="{{art.image}}"   height="250px" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title txt">{{art.name}}</h5>
+            <a href="#" class="btn btn-primary btncolor">See more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+</div>
+
+
