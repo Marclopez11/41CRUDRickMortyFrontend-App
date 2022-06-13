@@ -3,22 +3,45 @@
 
 <div class="container my-5">
   <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
-    <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
-        <div class="card-body">
-          <h5 class="card-title">name <span class="badge bg-danger">species</span> </h5>
 
-          <p class="card-text">origin</p>
-        </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">status</li>
-          <li class="list-group-item">gender</li>
-          <li class="list-group-item">location</li>
-        </ul>
-        <div class="card-body">
-          <a href="#" class="card-link">Back</a>
-        </div>
 
+    <form>
+      <div class="form-group">
+          <label for="name">name</label>
+          <input type="text" class="form-control" id="name" [(ngModel)]="personActual.name" name="name" />
+      </div>
+      <div class="form-group">
+          <label for="status">status</label>
+          <input type="text" class="form-control" id="status" [(ngModel)]="personActual.status" name="status" />
+      </div>
+
+      <div class="form-group">
+        <label for="species">species</label>
+        <input type="text" class="form-control" id="species" [(ngModel)]="personActual.species" name="species" />
     </div>
+
+    <div class="form-group">
+      <label for="gender">gender</label>
+      <input type="text" class="form-control" id="gender" [(ngModel)]="personActual.gender" name="gender" />
+  </div>
+
+  <div class="form-group">
+    <label for="origin">origin</label>
+    <input type="text" class="form-control" id="origin" [(ngModel)]="personActual.origin" name="origin" />
+  </div>
+
+  <div class="form-group">
+    <label for="location">location</label>
+    <input type="text" class="form-control" id="location" [(ngModel)]="personActual.location" name="location" />
+</div>
+
+
+  </form>
+
+
+
+  <button type="button" class="btn btn-danger" (click)="updatePerson()">Update</button>
+  <button type="button" class="btn btn-warning" (click)="deletePerson()">Delete</button>
     <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
         <img class="rounded-lg-3" src="../../assets/fotos/riky.png" alt="" width="500" height="500">
     </div>

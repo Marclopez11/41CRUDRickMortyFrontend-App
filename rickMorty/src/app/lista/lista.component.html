@@ -4,7 +4,15 @@
 <div class="container box">
   <div class="row align-items-start">
     <div class="row">
-      <div  *ngFor="let art of articulos" class="col-sm-3">
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Search by title" [(ngModel)]="name" />
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary" type="button" (click)="searchName()">
+            Search
+          </button>
+        </div>
+      </div>
+      <div  *ngFor="let art of articulos;let i = index "[class.active]="i == actualIndex"  (click)="setActivePerson(art,i)" class="col-sm-3">
         <div class="card" style="width: 18rem;margin-top: 40px;margin-right: 40px">
           <img class="card-img-top" src="{{art.image}}"   height="250px" alt="Card image cap">
           <div class="card-body">
@@ -12,6 +20,41 @@
             <a href="#" class="btn btn-primary btncolor">See more</a>
           </div>
         </div>
+      </div>
+
+      <button class="m-3 btn btn-sm btn-danger" (click)="removeAllPersons()">
+      Remove All
+      </button>
+    </div>
+
+    <div class="col-md-6">
+      <div *ngIf="personactual.id">
+        <h4>Book</h4>
+        <div>
+          <label><strong>Name:</strong></label>{{personactual.name}}
+        </div>
+        <div>
+          <label><strong>status:</strong></label>{{personactual.status}}
+        </div>
+        <div>
+          <label><strong>species:</strong></label>{{personactual.species}}
+        </div>
+        <div>
+          <label><strong>gender:</strong></label>{{personactual.gender}}
+        </div>
+        <div>
+          <label><strong>origin:</strong></label>{{personactual.origin}}
+        </div>
+        <div>
+          <label><strong>location:</strong></label>{{personactual.location}}
+        </div>
+        <a class="badge badge-warning" routerLink="/persons/{{personactual.id}}">
+          Edit
+        </a>
+      </div>
+      <div *ngIf="!personactual">
+        <br />
+        <p>Please click  on a Person...</p>
       </div>
     </div>
   </div>

@@ -1,0 +1,48 @@
+<form action="/action_page.php">
+  <div class="mb-3 mt-3">
+    <label for="name" class="form-label"   [(ngModel)]="person.name"  >name:</label>
+    <input type="text" class="form-control" id="name" placeholder="name" name="name">
+  </div>
+  <div class="mb-3">
+    <label for="status" class="form-label">status:</label>
+    <input type="text" class="form-control" id="status" placeholder="status" name="status">
+  </div>
+
+  <div class="mb-3">
+    <label for="species" class="form-label">species:</label>
+    <input type="text" class="form-control" id="species" placeholder="species" name="species">
+  </div>
+
+
+  <div class="mb-3">
+    <label for="gender" class="form-label">gender:</label>
+    <input type="text" class="form-control" id="gender" placeholder="gender" name="gender">
+  </div>
+
+
+  <div class="mb-3">
+    <label for="origin" class="form-label">origin:</label>
+    <input type="text" class="form-control" id="origin" placeholder="origin" name="origin">
+  </div>
+
+
+  <div class="mb-3">
+    <label for="location" class="form-label">location:</label>
+    <input type="text" class="form-control" id="location" placeholder="location" name="location">
+  </div>
+
+
+  <div class="form-check mb-3">
+    <label class="form-check-label">
+      <button (click)="savePerson()" class="btn btn-primary">Submit</button>
+    </label>
+  </div>
+
+  <div *ngIf="submitted">
+    <h4>Tutorial was submitted Successefully!</h4>
+    <button class="btn btn-success" (click)="newPerson()">Add</button>
+  </div>
+
+
+
+</form>

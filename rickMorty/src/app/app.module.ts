@@ -9,6 +9,8 @@ import { HomeComponent } from './home/home.component';
 
 import {HttpClientModule} from '@angular/common/http';
 import { PopupComponent } from './popup/popup.component';
+import { CreatePersonComponent } from './create-person/create-person.component';
+import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,12 +18,15 @@ import { PopupComponent } from './popup/popup.component';
     ListaComponent,
     AboutComponent,
     HomeComponent,
-    PopupComponent
+    PopupComponent,
+    CreatePersonComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
